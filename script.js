@@ -207,13 +207,13 @@ $$("[data-need]").forEach((button) => {
 
 const teacherData = {
   kamali:
-    "Kamali Rajesh is listed as the Center Head.",
+    "Meet Mrs. Kamali Rajesh. Centre Head & Chief Teacher. The heart behind Lalitha Sree Academy, Mrs. Kamali Rajesh brings dedication, experience, and a passion for teaching. With her inspiring leadership and student-first approach, she turns learning into a journey of confidence and excellence. Her vision is simple, teach with purpose, guide with care, and inspire every student to achieve their best.",
 
-  meera:
-    "Meera Ma'am is part of the academy's teaching section.",
+  vaanshika:
+    "Meet Dr. Vaanshika Rajesh.With a genuine passion for teaching, Dr. Vaanshika Rajesh brings a friendly and engaging approach to Science. She focuses on making concepts easy to understand while creating a comfortable space for students to learn and ask questions. Her teaching combines clarity, patience, and a little fun, making even challenging topics feel approachable. Her aim is simple, to help every student understand better, learn confidently, and enjoy the process.",
 
-  arun:
-    "Arun Sir is part of the academy's teaching section."
+  himaya:
+    "Meet Himaya Rajesh.Vivid, lively, and determined, Himaya brings energy and enthusiasm into every classroom. She makes challenging concepts feel simple, engaging, and easier to connect with. With her fun teaching style and focused approach, she inspires students to learn with confidence and curiosity. Learning with her isn’t just studying, it’s understanding, exploring, and enjoying the journey."
 };
 
 $$(".teacher-more").forEach((button) => {
@@ -221,8 +221,8 @@ $$(".teacher-more").forEach((button) => {
 
     const teacher = button.dataset.teacher;
 
-    $("#teacher-detail").textContent =
-      teacherData[teacher];
+    $("#teacher-detail").innerHTML =
+      teacherData[teacher].replace(/\n/g, "<br>");
   });
 });
 

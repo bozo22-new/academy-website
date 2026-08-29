@@ -1491,22 +1491,22 @@ textarea:focus {
 
 
 .teacher-detail {
-  max-width: 820px;
+  max-width: 1180px;
+  margin: 28px auto 0;
+  padding: 28px 40px;
 
-  margin: 22px auto 0;
+  background: #fffdf0;
 
-  padding: 17px 20px;
-
-  background: #fff8cf;
-
-  border:
-    1px dashed #dfca55;
-
-  border-radius: 17px;
-
-  text-align: center;
+  border: 1px dashed #dfca55;
+  border-radius: 22px;
 
   color: #645a2a;
+
+  text-align: left;
+  font-size: 1rem;
+  line-height: 1.75;
+
+  box-shadow: 0 8px 20px rgba(32, 48, 43, 0.05);
 }
 
 
