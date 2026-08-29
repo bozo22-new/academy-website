@@ -1,7 +1,15 @@
 const tuitionData = {
   "kg-5": {
     label: "KG to V",
-    subjects: ["English", "Mathematics", "EVS", "Hindi", "Tamil"],
+    subjects: [
+      "English",
+      "Mathematics",
+      "EVS"
+    ],
+    languages: [
+      "Tamil",
+      "Hindi"
+    ],
     approach:
       "Foundation support for reading, writing, numbers, homework and regular practice habits."
   },
@@ -12,7 +20,10 @@ const tuitionData = {
       "Mathematics",
       "Science",
       "English",
-      "Social Studies",
+      "Social Studies"
+    ],
+    languages: [
+      "Tamil",
       "Hindi"
     ],
     approach:
@@ -21,7 +32,16 @@ const tuitionData = {
 
   "9-10": {
     label: "IX to X",
-    subjects: ["Mathematics", "Science", "English", "Social Science"],
+    subjects: [
+      "Mathematics",
+      "Science",
+      "English",
+      "Social Science"
+    ],
+    languages: [
+      "Tamil",
+      "Hindi"
+    ],
     approach:
       "Concept-first teaching, chapter tests and exam-oriented revision."
   },
@@ -33,17 +53,16 @@ const tuitionData = {
         "Physics",
         "Chemistry",
         "Mathematics",
-        "Biology",
-        "English"
+        "Biology"
       ],
       commerce: [
         "Accountancy",
         "Business Studies",
         "Economics",
-        "Mathematics",
-        "English"
+        "Mathematics"
       ]
     },
+    languages: [],
     approach:
       "Stream-wise depth, board-pattern practice, scheduled tests and doubt clarification."
   }
@@ -114,9 +133,18 @@ function updateTuition() {
       : "");
 
   // Update subject pills
-  $("#subject-pills").innerHTML = subjects
-    .map((subject) => `<span>${subject}</span>`)
-    .join("");
+$("#subject-pills").innerHTML = subjects
+  .map((subject) => `<span>${subject}</span>`)
+  .join("");
+
+$("#language-pills").innerHTML = data.languages
+  ? data.languages
+      .map((language) => `<span>${language}</span>`)
+      .join("")
+  : "";
+
+$("#languages-section").style.display =
+  data.languages && data.languages.length ? "block" : "none";
 
   // Update approach
   $("#approach-copy").textContent = data.approach;
