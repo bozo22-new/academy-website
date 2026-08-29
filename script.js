@@ -232,17 +232,27 @@ $$(".teacher-more").forEach((button) => {
 ----------------------------------- */
 
 $(".enquiry-form").addEventListener("submit", (event) => {
-  event.preventDefault();
+    event.preventDefault();
 
-  const form = event.currentTarget;
-  const formData = new FormData(form);
+    const form = event.currentTarget;
+    const formData = new FormData(form);
 
-  const name = formData.get("name");
+    const name = formData.get("name") || "";
+    const program = formData.get("program") || "";
+    const message = formData.get("message") || "";
 
-  $("#form-note").textContent =
-    `Thanks${name ? `, ${name}` : ""}! Your enquiry is ready to be shared with the academy.`;
+    const whatsappMessage =
+        `Hello Lalitha Sree Academy,\n\n` +
+        `Name: ${name}\n` +
+        `Program: ${program}\n\n` +
+        `Message: ${message}`;
 
-  form.reset();
+    const whatsappURL =
+        `https://wa.me/919551677788?text=${encodeURIComponent(whatsappMessage)}`;
+
+    window.open(whatsappURL, "_blank");
+
+    form.reset();
 });
 
 
