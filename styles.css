@@ -2143,6 +2143,11 @@ footer span {
 
 @media (max-width: 760px) {
   .section-doodles {
-    display: none;
+    display: block;
+  }
+
+  .section-doodles .doodle {
+    width: 48px;
+    opacity: 0.13;
   }
 }
