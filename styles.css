@@ -2070,3 +2070,79 @@ footer span {
   }
 
 }
+
+/* =========================================
+   EDUCATIONAL DOODLE DECORATIONS
+   Added only for the decoration update.
+========================================= */
+.section,
+.hero {
+  position: relative;
+}
+
+.section-doodles {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+  user-select: none;
+}
+
+.section-doodles .doodle {
+  position: absolute;
+  display: block;
+  width: 84px;
+  height: auto;
+  object-fit: contain;
+  opacity: 0.20;
+  pointer-events: none;
+  user-select: none;
+}
+
+.section-doodles + *,
+.hero > *:not(.section-doodles) {
+  position: relative;
+  z-index: 1;
+}
+
+.hero .section-doodles .doodle-1 { left: 2%; top: 9%; width: 104px; transform: rotate(-12deg); }
+.hero .section-doodles .doodle-2 { left: 1%; bottom: 11%; width: 96px; transform: rotate(7deg); }
+.hero .section-doodles .doodle-3 { right: 1%; top: 10%; width: 88px; transform: rotate(8deg); }
+.hero .section-doodles .doodle-4 { right: 3%; bottom: 9%; width: 74px; transform: rotate(-8deg); }
+
+#learning-path .section-doodles .doodle-1 { left: 1%; top: 13%; width: 94px; transform: rotate(-8deg); }
+#learning-path .section-doodles .doodle-2 { right: 2%; top: 7%; width: 78px; transform: rotate(8deg); }
+#learning-path .section-doodles .doodle-3 { left: 2%; bottom: 8%; width: 84px; transform: rotate(6deg); }
+#learning-path .section-doodles .doodle-4 { right: 1%; bottom: 12%; width: 96px; transform: rotate(-10deg); }
+
+#tuition .section-doodles .doodle-1 { left: 1%; top: 8%; width: 92px; transform: rotate(-7deg); }
+#tuition .section-doodles .doodle-2 { right: 1%; top: 15%; width: 82px; transform: rotate(8deg); }
+#tuition .section-doodles .doodle-3 { left: 2%; bottom: 9%; width: 88px; transform: rotate(8deg); }
+#tuition .section-doodles .doodle-4 { right: 2%; bottom: 7%; width: 100px; transform: rotate(-7deg); }
+
+#student-zone .section-doodles .doodle-1 { left: 1%; top: 10%; width: 94px; transform: rotate(-8deg); }
+#student-zone .section-doodles .doodle-2 { right: 1%; top: 8%; width: 88px; transform: rotate(8deg); }
+#student-zone .section-doodles .doodle-3 { left: 2%; bottom: 9%; width: 86px; transform: rotate(6deg); }
+#student-zone .section-doodles .doodle-4 { right: 2%; bottom: 10%; width: 78px; transform: rotate(-8deg); }
+
+#teachers .section-doodles .doodle-1 { left: 1%; top: 11%; width: 92px; transform: rotate(-7deg); }
+#teachers .section-doodles .doodle-2 { right: 2%; top: 7%; width: 78px; transform: rotate(8deg); }
+#teachers .section-doodles .doodle-3 { left: 2%; bottom: 8%; width: 86px; transform: rotate(6deg); }
+#teachers .section-doodles .doodle-4 { right: 1%; bottom: 9%; width: 94px; transform: rotate(-8deg); }
+
+#parent-zone .section-doodles .doodle-1 { left: 1%; top: 9%; width: 92px; transform: rotate(-8deg); }
+#parent-zone .section-doodles .doodle-2 { right: 1%; top: 12%; width: 78px; transform: rotate(7deg); }
+#parent-zone .section-doodles .doodle-3 { left: 2%; bottom: 8%; width: 76px; transform: rotate(8deg); }
+#parent-zone .section-doodles .doodle-4 { right: 2%; bottom: 8%; width: 90px; transform: rotate(-7deg); }
+
+#contact .section-doodles .doodle-1 { left: 1%; top: 12%; width: 86px; transform: rotate(-8deg); }
+#contact .section-doodles .doodle-2 { right: 2%; top: 9%; width: 80px; transform: rotate(7deg); }
+#contact .section-doodles .doodle-3 { left: 2%; bottom: 9%; width: 96px; transform: rotate(8deg); }
+#contact .section-doodles .doodle-4 { right: 1%; bottom: 8%; width: 76px; transform: rotate(-7deg); }
+
+@media (max-width: 760px) {
+  .section-doodles {
+    display: none;
+  }
+}
