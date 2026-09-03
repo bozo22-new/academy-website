@@ -2141,13 +2141,89 @@ footer span {
 #contact .section-doodles .doodle-3 { left: 2%; bottom: 9%; width: 96px; transform: rotate(8deg); }
 #contact .section-doodles .doodle-4 { right: 1%; bottom: 8%; width: 76px; transform: rotate(-7deg); }
 
+/* ================================
+   EDUCATIONAL DOODLE DECORATIONS
+   ================================ */
+
+.section,
+.hero {
+  position: relative;
+}
+
+.section-doodles {
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+  overflow: hidden;
+  pointer-events: none;
+  user-select: none;
+}
+
+.section-doodles .doodle {
+  position: absolute;
+  display: block;
+  height: auto;
+  object-fit: contain;
+  opacity: 0.18;
+  pointer-events: none;
+  user-select: none;
+}
+
+/* Desktop */
+.hero .section-doodles .doodle-1 {
+  left: 2%;
+  top: 9%;
+  width: 104px;
+}
+
+.hero .section-doodles .doodle-2 {
+  left: 1%;
+  bottom: 11%;
+  width: 96px;
+}
+
+.hero .section-doodles .doodle-3 {
+  right: 1%;
+  top: 10%;
+  width: 88px;
+}
+
+.hero .section-doodles .doodle-4 {
+  right: 3%;
+  bottom: 9%;
+  width: 74px;
+}
+
+/* Mobile */
 @media (max-width: 760px) {
+
   .section-doodles {
     display: block;
+    z-index: 5;
   }
 
   .section-doodles .doodle {
-    width: 48px;
-    opacity: 0.13;
+    width: 42px !important;
+    opacity: 0.15;
+  }
+
+  .section-doodles .doodle-1 {
+    left: 2px;
+    top: 8px;
+  }
+
+  .section-doodles .doodle-2 {
+    right: 2px;
+    top: 8px;
+  }
+
+  .section-doodles .doodle-3 {
+    left: 2px;
+    bottom: 8px;
+  }
+
+  .section-doodles .doodle-4 {
+    right: 2px;
+    bottom: 8px;
   }
 }
