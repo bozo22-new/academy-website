@@ -2196,34 +2196,43 @@ footer span {
 
 /* Mobile */
 @media (max-width: 760px) {
-
   .section-doodles {
     display: block;
-    z-index: 5;
+    z-index: 2;
   }
 
   .section-doodles .doodle {
-    width: 42px !important;
-    opacity: 0.15;
+    display: block;
+    width: 38px !important;
+    opacity: 0.12;
   }
 
+  /* Scattered positions */
   .section-doodles .doodle-1 {
-    left: 2px;
-    top: 8px;
+    left: 3%;
+    top: 14%;
+    width: 36px !important;
+    transform: rotate(-12deg);
   }
 
   .section-doodles .doodle-2 {
-    right: 2px;
-    top: 8px;
+    right: 4%;
+    top: 38%;
+    width: 42px !important;
+    transform: rotate(10deg);
   }
 
   .section-doodles .doodle-3 {
-    left: 2px;
-    bottom: 8px;
+    left: 5%;
+    bottom: 22%;
+    width: 34px !important;
+    transform: rotate(8deg);
   }
 
   .section-doodles .doodle-4 {
-    right: 2px;
-    bottom: 8px;
+    right: 6%;
+    bottom: 8%;
+    width: 40px !important;
+    transform: rotate(-9deg);
   }
 }
